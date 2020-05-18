@@ -8,9 +8,9 @@ const Header = ({ title }) => {
   return (
     <div className="my-8">
       <header className="text-center">
-        <h1 className="uppercase text-6xl font-title text-black">
+        <h1 className="uppercase text-5xl font-title text-black">
           {titleExceptLastWord}
-          <span className="bg-gray-200 pr-4 pl-3 rounded border-dotted border-l-4">
+          <span className="bg-gray-100 pr-4 pl-3 rounded border-dotted border-l-4 border-gray-300">
             {lastWord}
           </span>
         </h1>

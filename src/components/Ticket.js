@@ -36,25 +36,26 @@ const Ticket = () => {
   }, []);
 
   return (
-    <div className="flex border-2 rounded border-gray-200">
+    <div className="flex border-2 rounded border-gray-300">
       <div className="w-full py-2 px-2">
         <div className="align-middle" ref={chartEl}></div>
       </div>
-      <div className="w-1/3 py-2 px-2 bg-gray-200 border-dotted border-l-4 flex flex-col">
-        <div className="flex-grow px-4 py-2 m-2 text-black">
+      <div className="w-1/3 py-2 px-2 bg-gray-100 border-dotted border-l-4 flex flex-col border-gray-300">
+        <div className="flex-grow px-4 py-2 m-2 text-black text-lg">
           <strong>Bar Chart</strong>
         </div>
         <div className="h-full px-4 py-2 m-2 text-black">
-          This is a bar chart to plot some bars as a chart.
+          This is a bar chart to plot some bars as a chart. And another
+          description could be this one.
         </div>
-        <div className="px-4 py-2 m-2 space-y-2 text-black">
-          <span className="inline-block bg-gray-400 rounded-full px-4 py-2 mr-2">
-            Pill1
+        <div className="px-4 py-2 m-2 space-y-1 text-black text-xs lowercase font-light">
+          <span className="inline-block bg-gray-300 rounded-full px-3 py-1 mr-1">
+            Pill1plus
           </span>
-          <span className="inline-block bg-gray-400 rounded-full px-4 py-2 mr-2">
+          <span className="inline-block bg-gray-300 rounded-full px-3 py-1 mr-1">
             Pills
           </span>
-          <span className="inline-block bg-gray-400 rounded-full px-4 py-2 mr-2">
+          <span className="inline-block bg-gray-300 rounded-full px-3 py-1 mr-1">
             Pill2
           </span>
         </div>
