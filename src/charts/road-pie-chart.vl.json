@@ -72,7 +72,8 @@
         "direction": "vertical",
         "orient": "none",
         "legendX": 220,
-        "legendY": 55
+        "legendY": 55,
+        "fillColor": "transparent"
       }
     },
     "opacity": {

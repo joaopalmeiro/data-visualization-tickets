@@ -12,6 +12,9 @@ const Ticket = ({ spec }) => {
   const name = spec.name || "Example chart";
   const vegaLiteOrVegaFat = spec.$schema;
 
+  // SVG renderer generates global CSS rules: https://github.com/vega/vega/issues/2618
+  // Solution: Vega v5.12.1
+
   useEffect(() => {
     vegaEmbed(chartEl.current, spec, {
       renderer: ticketEnum.RENDERER,
