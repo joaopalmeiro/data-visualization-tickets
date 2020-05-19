@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import vegaEmbed from "vega-embed";
 import ticketEnum from "./helpers/ticketEnum";
 import PropTypes from "prop-types";
+import { Info } from "vega";
 
 const Ticket = ({ spec }) => {
   const chartEl = useRef();
@@ -20,6 +21,7 @@ const Ticket = ({ spec }) => {
       i18n: {
         SOURCE_ACTION: ticketEnum.SOURCE_ACTION,
       },
+      logLevel: Info,
     });
   }, [spec, name]);
 
