@@ -4,6 +4,7 @@ A showcase page of visualizations created with Vega/Vega-Lite and powered by Rea
 
 ## Quick start
 
+- `yarn`
 - `yarn start`
 
 ## Commands

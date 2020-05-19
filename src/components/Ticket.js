@@ -11,19 +11,38 @@ const Ticket = (props) => {
   const name = props.spec.name || "Example chart";
   const vegaLiteOrVegaFat = props.spec.$schema;
 
+  const sourceHeader = `
+    <script>
+      const style = document.createElement("link"); 
+      style.href = "ascetic-mod.css";
+      style.rel = "stylesheet";
+      style.type = "text/css";
+      document.head.appendChild(style); 
+      
+      const script = document.createElement("script"); 
+      script.src = "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js";
+      script.onload = () => hljs.highlightBlock(document.querySelector("pre"));
+      document.head.appendChild(script);
+    </script>
+  `;
+
   useEffect(() => {
     vegaEmbed(chartEl.current, props.spec, {
       renderer: "svg",
       scaleFactor: 5,
       downloadFileName: name,
+      defaultStyle: true,
+      sourceHeader: sourceHeader,
+      i18n: {
+        SOURCE_ACTION: "View Source Spec",
+      },
     });
-  }, [props.spec, name]);
+  }, [props.spec, name, sourceHeader]);
 
   // https://vega.github.io/schema/vega-lite/v4.json
   // https://vega.github.io/schema/vega/v5.json
   const re = /(\w+-?\w+)\/\w([.\d]+)\.json$/;
   const schema = vegaLiteOrVegaFat.match(re);
-
   const lib = schema[1];
   // const version = schema[2];
 
