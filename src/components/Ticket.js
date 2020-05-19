@@ -1,43 +1,27 @@
 import React, { useEffect, useRef } from "react";
 import vegaEmbed from "vega-embed";
+import ticketEnum from "./helpers/ticketEnum";
+import PropTypes from "prop-types";
 
-const Ticket = (props) => {
+const Ticket = ({ spec }) => {
   const chartEl = useRef();
 
-  const tags = props.spec.hasOwnProperty("usermeta")
-    ? props.spec.usermeta.tags || []
-    : [];
-  const description = props.spec.description || "No description available.";
-  const name = props.spec.name || "Example chart";
-  const vegaLiteOrVegaFat = props.spec.$schema;
-
-  const sourceHeader = `
-    <script>
-      const style = document.createElement("link"); 
-      style.href = "ascetic-mod.css";
-      style.rel = "stylesheet";
-      style.type = "text/css";
-      document.head.appendChild(style); 
-      
-      const script = document.createElement("script"); 
-      script.src = "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js";
-      script.onload = () => hljs.highlightBlock(document.querySelector("pre"));
-      document.head.appendChild(script);
-    </script>
-  `;
+  const tags = spec.hasOwnProperty("usermeta") ? spec.usermeta.tags || [] : [];
+  const description = spec.description || "No description available.";
+  const name = spec.name || "Example chart";
+  const vegaLiteOrVegaFat = spec.$schema;
 
   useEffect(() => {
-    vegaEmbed(chartEl.current, props.spec, {
-      renderer: "svg",
-      scaleFactor: 5,
+    vegaEmbed(chartEl.current, spec, {
+      renderer: ticketEnum.RENDERER,
+      scaleFactor: ticketEnum.SCALE_FACTOR,
       downloadFileName: name,
-      defaultStyle: true,
-      sourceHeader: sourceHeader,
+      sourceHeader: ticketEnum.SOUCE_HEADER,
       i18n: {
-        SOURCE_ACTION: "View Source Spec",
+        SOURCE_ACTION: ticketEnum.SOURCE_ACTION,
       },
     });
-  }, [props.spec, name, sourceHeader]);
+  }, [spec, name]);
 
   // https://vega.github.io/schema/vega-lite/v4.json
   // https://vega.github.io/schema/vega/v5.json
@@ -72,6 +56,10 @@ const Ticket = (props) => {
       </div>
     </div>
   );
+};
+
+Ticket.propTypes = {
+  spec: PropTypes.object.isRequired,
 };
 
 export default Ticket;

@@ -2,7 +2,7 @@
 Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 */
 
-/* *Modified* */
+/* Modified */
 .hljs {
   display: block;
   overflow-x: auto;
@@ -13,6 +13,7 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
     '"Courier New"', "monospace";
 }
 
+/* Modified */
 .hljs-string,
 .hljs-variable,
 .hljs-template-variable,
@@ -22,7 +23,8 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 .hljs-addition,
 .hljs-attribute,
 .hljs-link,
-.hljs-number {
+.hljs-number,
+.hljs-literal {
   color: #888;
 }
 

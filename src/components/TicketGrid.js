@@ -1,5 +1,6 @@
 import React from "react";
 import Ticket from "./Ticket";
+import { generateKey } from "./helpers/utils";
 
 const TicketGrid = () => {
   // Source: https://github.com/gatsbyjs/gatsby/issues/3663
@@ -9,7 +10,7 @@ const TicketGrid = () => {
   return (
     <div className="flex flex-col space-y-8">
       {req.keys().map((key, index) => (
-        <Ticket key={index} spec={req(key)} />
+        <Ticket key={generateKey(index)} spec={req(key)} />
       ))}
     </div>
   );
