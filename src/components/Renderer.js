@@ -27,8 +27,8 @@ const Renderer = ({ spec, downloadFilename }) => {
     })
       .then(function ({ view }) {
         // View API: https://vega.github.io/vega/docs/api/view/
-        if (spec.width < 300) {
-          view.width(300);
+        if (spec.width < 200) {
+          view.width(200);
         }
         view.run();
       })
