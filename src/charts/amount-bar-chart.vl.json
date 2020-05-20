@@ -39,7 +39,9 @@
       "type": "ordinal",
       "axis": {
         "title": "Sector",
-        "labelAngle": 0
+        "labelAngle": 0,
+        "ticks": false,
+        "labelPadding": 7
       },
       "sort": { "op": "count", "field": "amount", "order": "ascending" }
     },

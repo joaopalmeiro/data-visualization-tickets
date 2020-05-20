@@ -3,6 +3,11 @@
   <head>
     <title>A primer on mixing React and Vega</title>
     <meta charset="utf-8" />
+    <!-- Source: https://css-tricks.com/emojis-as-favicons/ -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>"
+    />
     <style>
       body {
         font-family: "system-ui", "-apple-system", "BlinkMacSystemFont",
@@ -27,12 +32,15 @@
       .remark-slide-content {
         font-size: 40px;
       }
+      .title-slide .remark-slide-number {
+        display: none;
+      }
     </style>
   </head>
   <body>
     <textarea id="source">
 
-class: center, middle
+class: center, middle, title-slide
 
 # A primer on mixing <span style="color: #61dafb;">React</span> and <span style="color: #274c71;">Vega</span>
 
@@ -44,11 +52,27 @@ class: center, middle
 2. Deep-dive
 3. ...
 
+---
+
+# Agenda
+
+---
+
+# Agenda
+
+---
+
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script>
-      var slideshow = remark.create({ ratio: "16:10" });
+      var slideshow = remark.create({
+        ratio: "16:10",
+        includePresenterNotes: false,
+        slideNumberFormat: function (current, total) {
+          return current + "/" + total;
+        },
+      });
     </script>
   </body>
 </html>
