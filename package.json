@@ -24,7 +24,8 @@
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "presentation": "open -a 'Google Chrome' slides.html"
+    "presentation": "open -a 'Google Chrome' slides.html",
+    "presentation:firefox": "open -a 'Firefox' slides.html"
   },
   "eslintConfig": {
     "extends": "react-app"
