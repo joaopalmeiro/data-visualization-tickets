@@ -12,11 +12,19 @@ const sourceHeader = `
   </script>
 `;
 
+const locale = {
+  decimal: ",",
+  thousands: ".",
+  grouping: [3],
+  currency: ["", "€"],
+};
+
 const ticketEnum = {
   SOUCE_HEADER: sourceHeader,
   RENDERER: "svg",
   SCALE_FACTOR: 5,
   SOURCE_ACTION: "View Source Spec",
+  LOCALE: locale,
 };
 
 export default ticketEnum;

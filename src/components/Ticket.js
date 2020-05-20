@@ -3,6 +3,7 @@ import vegaEmbed from "vega-embed";
 import ticketEnum from "./helpers/ticketEnum";
 import PropTypes from "prop-types";
 import { Info } from "vega";
+import "../assets/main.css";
 
 const Ticket = ({ spec }) => {
   const chartEl = useRef();
@@ -25,6 +26,7 @@ const Ticket = ({ spec }) => {
         SOURCE_ACTION: ticketEnum.SOURCE_ACTION,
       },
       logLevel: Info,
+      formatLocale: ticketEnum.LOCALE,
     });
   }, [spec, name]);
 

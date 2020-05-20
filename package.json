@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "jest-image-snapshot": "^4.0.0",
     "jest-transform-css": "^2.0.0",
     "jest-transform-file": "^1.1.1",
     "jsdom-screenshot": "^3.2.0",
@@ -42,7 +43,15 @@
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "cssnano": "^4.1.10",
+    "jest-canvas-mock": "^2.2.0",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.4.6"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "jest-transform-css",
+      "^.+\\.svg$": "jest-transform-file"
+    }
   }
 }

@@ -1,12 +1,11 @@
 import React from "react";
 import { generateImage } from "jsdom-screenshot";
 import { render } from "@testing-library/react";
-import Ticket from "./Ticket";
-import exampleSpec from "../charts/bar-chart.json";
+import Header from "./Header";
 
-describe("<Ticket />", () => {
+describe("<Header />", () => {
   it("has no visual regressions", async () => {
-    render(<Ticket spec={exampleSpec} />);
+    render(<Header title={"Data Visualization Tickets"} />);
 
     const screenshot = await generateImage();
     expect(screenshot).toMatchImageSnapshot();
