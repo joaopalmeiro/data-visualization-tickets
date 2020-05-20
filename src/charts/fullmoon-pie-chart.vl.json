@@ -17,7 +17,7 @@
     "axis": { "domainColor": "#44475a", "tickColor": "#44475a" }
   },
   "data": {
-    "values": [{ "category": "Full Moon", "value": 360, "order": 1 }]
+    "values": [{ "category": "Moon", "value": 360, "order": 1 }]
   },
   "mark": { "type": "arc", "outerRadius": 100 },
   "encoding": {
@@ -30,7 +30,7 @@
       "field": "category",
       "type": "nominal",
       "scale": {
-        "domain": ["Full Moon"],
+        "domain": ["Moon"],
         "range": ["#cbd5e0"]
       },
       "legend": {

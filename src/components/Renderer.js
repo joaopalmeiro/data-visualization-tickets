@@ -4,6 +4,7 @@ import { Info } from "vega";
 import rendererEnum from "./helpers/rendererEnum";
 import PropTypes from "prop-types";
 import "../assets/main.css";
+import "../assets/tooltip.css";
 
 const Renderer = ({ spec, downloadFilename }) => {
   const chartEl = useRef();
@@ -22,6 +23,7 @@ const Renderer = ({ spec, downloadFilename }) => {
       },
       logLevel: Info,
       formatLocale: rendererEnum.LOCALE,
+      tooltip: rendererEnum.TOOLTIP_OPTIONS,
     });
   }, [spec, downloadFilename]);
 

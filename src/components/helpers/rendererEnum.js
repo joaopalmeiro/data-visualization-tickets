@@ -19,12 +19,17 @@ const locale = {
   currency: ["", "€"],
 };
 
+const tooltipOptions = {
+  theme: "lcontrast",
+};
+
 const ticketEnum = {
   SOUCE_HEADER: sourceHeader,
   RENDERER: "svg",
   SCALE_FACTOR: 5,
   SOURCE_ACTION: "View Source Spec",
   LOCALE: locale,
+  TOOLTIP_OPTIONS: tooltipOptions,
 };
 
 export default ticketEnum;

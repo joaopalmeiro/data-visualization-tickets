@@ -1,0 +1,16 @@
+/* 
+ * Tutorial: https://github.com/vega/vega-tooltip/blob/master/docs/customizing_your_tooltip.md
+ * Reference: https://github.com/vega/vega-tooltip/blob/master/vega-tooltip.scss
+ */
+
+#vg-tooltip-element.vg-tooltip.lcontrast-theme {
+  color: #44475a;
+  font-family: Roboto;
+  font-size: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+#vg-tooltip-element.vg-tooltip.lcontrast-theme td.key {
+  color: #44475a;
+  font-weight: bold;
+}
