@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "",
+  "name": "Full Moon Pie Chart",
+  "usermeta": {
+    "tags": ["Pie Chart", "Interactive"]
+  },
+  "height": 200,
+  "width": 200,
+  "padding": 0,
+  "config": {
+    "font": "Roboto",
+    "style": {
+      "guide-label": { "fill": "#44475a" },
+      "guide-title": { "fill": "#44475a" }
+    },
+    "axis": { "domainColor": "#44475a", "tickColor": "#44475a" }
+  },
+  "data": {
+    "values": [{ "category": "Full Moon", "value": 360, "order": 1 }]
+  },
+  "mark": { "type": "arc", "outerRadius": 100 },
+  "encoding": {
+    "theta": {
+      "field": "value",
+      "type": "quantitative",
+      "stack": true
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Full Moon"],
+        "range": ["#cbd5e0"]
+      },
+      "legend": {
+        "title": null,
+        "direction": "vertical",
+        "orient": "none",
+        "legendX": 220,
+        "legendY": 95,
+        "fillColor": "transparent"
+      }
+    },
+    "order": {
+      "field": "order",
+      "type": "quantitative"
+    }
+  },
+  "view": { "stroke": null }
+}
