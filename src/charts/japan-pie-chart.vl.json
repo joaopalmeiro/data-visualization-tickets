@@ -34,14 +34,14 @@
       "type": "nominal",
       "scale": {
         "domain": ["Japan", "Also Japan"],
-        "range": ["white", "red"]
+        "range": ["#ed2939", "white"]
       },
       "legend": {
         "title": null,
         "direction": "vertical",
         "orient": "none",
         "legendX": 220,
-        "legendY": 95,
+        "legendY": 87.5,
         "fillColor": "transparent",
         "symbolStrokeWidth": 1
       }
@@ -51,17 +51,16 @@
     {
       "mark": {
         "type": "arc",
-        "outerRadius": 100,
-        "color": "#ed2939"
+        "outerRadius": 100
       },
-      "transform": [{ "filter": "datum.category == 'Japan'" }]
+      "transform": [{ "filter": "datum.category == 'Also Japan'" }]
     },
     {
       "mark": {
         "type": "arc",
         "outerRadius": 30
       },
-      "transform": [{ "filter": "datum.category == 'Also Japan'" }]
+      "transform": [{ "filter": "datum.category == 'Japan'" }]
     }
   ],
   "view": { "stroke": null }

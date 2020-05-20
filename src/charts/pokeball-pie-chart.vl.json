@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "",
+  "name": "Poké Ball Donut Chart",
+  "usermeta": {
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9_Ball",
+    "tags": ["Donut Chart"]
+  },
+  "height": 200,
+  "width": 200,
+  "padding": 0,
+  "config": {
+    "font": "Roboto",
+    "style": {
+      "guide-label": { "fill": "#44475a" },
+      "guide-title": { "fill": "#44475a" }
+    },
+    "axis": { "domainColor": "#44475a", "tickColor": "#44475a" }
+  },
+  "data": {
+    "values": [
+      { "category": "Top", "value": 180, "order": 1 },
+      { "category": "Bottom", "value": 180, "order": 1 },
+      { "category": "Center", "value": 360, "order": 2 }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Top", "Bottom", "Center"],
+        "range": ["#ed2939", "white", "white"]
+      },
+      "legend": {
+        "title": null,
+        "direction": "vertical",
+        "orient": "none",
+        "legendX": 220,
+        "legendY": 80,
+        "fillColor": "transparent",
+        "symbolStrokeWidth": 1
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 100,
+        "stroke": "#44475a",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "theta": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": { "range": [1.571, 7.854] },
+          "stack": true
+        }
+      },
+      "transform": [{ "filter": "datum.order == 1" }]
+    },
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 30,
+        "stroke": "#44475a",
+        "strokeWidth": 2
+      },
+      "transform": [{ "filter": "datum.order == 2" }]
+    },
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 15,
+        "stroke": "#44475a"
+      },
+      "transform": [{ "filter": "datum.order == 2" }]
+    }
+  ],
+  "view": { "stroke": null }
+}
