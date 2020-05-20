@@ -24,7 +24,15 @@ const Renderer = ({ spec, downloadFilename }) => {
       logLevel: Info,
       formatLocale: rendererEnum.LOCALE,
       tooltip: rendererEnum.TOOLTIP_OPTIONS,
-    });
+    })
+      .then(function ({ view }) {
+        // View API: https://vega.github.io/vega/docs/api/view/
+        if (spec.width < 300) {
+          view.width(300);
+        }
+        view.run();
+      })
+      .catch(console.error);
   }, [spec, downloadFilename]);
 
   return <div className="align-middle" ref={chartEl}></div>;

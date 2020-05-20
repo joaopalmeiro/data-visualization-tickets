@@ -35,6 +35,20 @@
       .title-slide .remark-slide-number {
         display: none;
       }
+      a {
+        color: #44475a;
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(207, 243, 255);
+        box-shadow: rgb(238, 251, 255) 0px -10px 0px inset;
+        transition: box-shadow 160ms ease 0s;
+      }
+
+      a:hover {
+        text-decoration: none;
+        box-shadow: rgb(207, 243, 255) 0px -1.2em 0px inset;
+      }
     </style>
   </head>
   <body>
@@ -46,22 +60,37 @@ class: center, middle, title-slide
 
 ---
 
-# Agenda
+# Framing
 
-1. Introduction
-2. Deep-dive
-3. ...
+- 
 
 ---
 
 # Agenda
 
+1. A project folder
+2. 
+1. A simple Renderer component
+2. A simple hierarchy of components
+3. Visual Regression Testing
+
 ---
 
-# Agenda
+# Toolbox
+
+- [[Create React App](https://create-react-app.dev/), [Vega/Vega-Lite](https://vega.github.io/)]
+
+- [VS Code ES7 React/Redux/React-Native/JS snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
+- [[Vega-Embed](https://github.com/vega/vega-embed), [Vega Tooltip](https://github.com/vega/vega-tooltip)]
+
+- [[jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot), [jsdom-screenshot](https://github.com/dferber90/jsdom-screenshot), [jest-transform-css](https://github.com/dferber90/jest-transform-css)]
 
 ---
 
+class: center, middle
+
+# To the app! 🦇
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
