@@ -1,7 +1,15 @@
 {
   "name": "data-visualization-tickets",
+  "description": "A showcase page of visualizations created with Vega/Vega-Lite and powered by React and Tailwind CSS.",
   "version": "0.1.0",
-  "private": true,
+  "repository": "https://github.com/joaopalmeiro/data-visualization-tickets",
+  "author": "joaopalmeiro",
+  "license": "MIT",
+  "homepage": "https://joaopalmeiro.github.io/data-visualization-tickets",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/data-visualization-tickets/issues"
+  },
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -26,7 +34,8 @@
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "presentation": "open -a 'Google Chrome' slides.html",
     "presentation:firefox": "open -a 'Firefox' slides.html",
-    "gh-pages": "npm run build && mv build docs || move build docs"
+    "gh-pages": "npm run build && rm -rf docs && mv build docs",
+    "serve": "serve -s docs"
   },
   "eslintConfig": {
     "extends": "react-app"
