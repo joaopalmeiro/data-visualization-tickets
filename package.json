@@ -25,7 +25,8 @@
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "presentation": "open -a 'Google Chrome' slides.html",
-    "presentation:firefox": "open -a 'Firefox' slides.html"
+    "presentation:firefox": "open -a 'Firefox' slides.html",
+    "gh-pages": "npm run build && mv build docs || move build docs"
   },
   "eslintConfig": {
     "extends": "react-app"
